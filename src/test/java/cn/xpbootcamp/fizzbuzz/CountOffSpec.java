@@ -127,4 +127,10 @@ public class CountOffSpec {
                 "34\n" +
                 "BuzzWhizz").isEqualTo(countOff.result(35));
     }
+
+    @Test
+    void should_return_correct_value_for_105_with_FizzBuzzWhizz() {
+        CountOff countOff = new CountOff();
+        assertThat(countOff.result(105).endsWith("FizzBuzzWhizz")).isEqualTo(true);
+    }
 }
