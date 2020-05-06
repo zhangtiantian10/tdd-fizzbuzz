@@ -7,31 +7,35 @@ public class CountOff {
     public String result(int count) {
         return IntStream.range(1, count + 1)
                 .mapToObj(number -> {
-                    if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
+                    boolean isFizz = number % 3 == 0;
+                    boolean isBuzz = number % 5 == 0;
+                    boolean isWhizz = number % 7 == 0;
+
+                    if (isFizz && isBuzz && isWhizz) {
                         return "FizzBuzzWhizz";
                     }
 
-                    if (number % 3 == 0 && number % 5 == 0) {
+                    if (isFizz && isBuzz) {
                         return "FizzBuzz";
                     }
 
-                    if (number % 3 == 0 && number % 7 == 0) {
+                    if (isFizz && isWhizz) {
                         return "FizzWhizz";
                     }
 
-                    if (number % 5 == 0 && number % 7 == 0) {
+                    if (isBuzz && isWhizz) {
                         return "BuzzWhizz";
                     }
 
-                    if (number % 3 == 0) {
+                    if (isFizz) {
                         return "Fizz";
                     }
 
-                    if (number % 5 == 0) {
+                    if (isBuzz) {
                         return "Buzz";
                     }
 
-                    if (number % 7 == 0) {
+                    if (isWhizz) {
                         return "Whizz";
                     }
 
