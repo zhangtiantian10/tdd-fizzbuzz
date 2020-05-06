@@ -15,6 +15,10 @@ public class CountOff {
                         return "Buzz";
                     }
 
+                    if (number % 7 == 0) {
+                        return "Whizz";
+                    }
+
                     return String.valueOf(number);
                 })
                 .collect(Collectors.joining("\n"));
