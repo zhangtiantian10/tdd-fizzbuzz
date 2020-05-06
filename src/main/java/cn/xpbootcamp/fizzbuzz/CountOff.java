@@ -6,7 +6,9 @@ import java.util.stream.IntStream;
 public class CountOff {
     public String result(int count) {
         return IntStream.range(1, count + 1)
-                .mapToObj(Integer::toString)
+                .mapToObj(number -> {
+                    return number % 3 == 0 ? "Fizz" : String.valueOf(number);
+                })
                 .collect(Collectors.joining("\n"));
     }
 }
