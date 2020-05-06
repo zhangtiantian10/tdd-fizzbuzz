@@ -61,4 +61,30 @@ public class CountOffSpec {
                 "Whizz\n" +
                 "FizzBuzz").isEqualTo(countOff.result(15));
     }
+
+    @Test
+    void should_return_12fizz4BuzzfizzWhizz8fizzBuzz11fizz13whizzfizzbuzz1617fizz19buzzfizzwhizz() {
+        CountOff countOff = new CountOff();
+        assertThat("1\n" +
+                "2\n" +
+                "Fizz\n" +
+                "4\n" +
+                "Buzz\n" +
+                "Fizz\n" +
+                "Whizz\n" +
+                "8\n" +
+                "Fizz\n" +
+                "Buzz\n" +
+                "11\n" +
+                "Fizz\n" +
+                "13\n" +
+                "Whizz\n" +
+                "FizzBuzz\n" +
+                "16\n" +
+                "17\n" +
+                "Fizz\n" +
+                "19\n" +
+                "Buzz\n" +
+                "FizzWhizz").isEqualTo(countOff.result(21));
+    }
 }
