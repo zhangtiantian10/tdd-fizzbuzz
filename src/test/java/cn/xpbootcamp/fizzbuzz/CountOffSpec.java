@@ -19,4 +19,14 @@ public class CountOffSpec {
                 "2\n" +
                 "Fizz").isEqualTo(countOff.result(3));
     }
+
+    @Test
+    void should_return_12fizz4Buzz() {
+        CountOff countOff = new CountOff();
+        assertThat("1\n" +
+                "2\n" +
+                "Fizz\n" +
+                "4\n" +
+                "Buzz").isEqualTo(countOff.result(5));
+    }
 }

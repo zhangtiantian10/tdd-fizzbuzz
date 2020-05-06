@@ -7,7 +7,15 @@ public class CountOff {
     public String result(int count) {
         return IntStream.range(1, count + 1)
                 .mapToObj(number -> {
-                    return number % 3 == 0 ? "Fizz" : String.valueOf(number);
+                    if (number % 3 == 0) {
+                        return "Fizz";
+                    }
+
+                    if (number % 5 == 0) {
+                        return "Buzz";
+                    }
+
+                    return String.valueOf(number);
                 })
                 .collect(Collectors.joining("\n"));
     }
