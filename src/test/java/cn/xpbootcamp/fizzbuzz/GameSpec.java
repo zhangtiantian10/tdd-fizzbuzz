@@ -65,4 +65,22 @@ public class GameSpec {
         Game game = new Game();
         assertThat(game.run(54)).isEqualTo("54");
     }
+
+    @Test
+    void should_not_return_Buzz_when_contains_7() {
+        Game game = new Game();
+        assertThat(game.run(70)).isEqualTo("Whizz");
+    }
+
+    @Test
+    void should_not_return_Buzz_when_contains_3_and_7_and_5() {
+        Game game = new Game();
+        assertThat(game.run(735)).isEqualTo("FizzWhizz");
+    }
+
+    @Test
+    void should_not_return_Buzz_when_cont_5_and_7() {
+        Game game = new Game();
+        assertThat(game.run(57)).isEqualTo("FizzWhizz");
+    }
 }

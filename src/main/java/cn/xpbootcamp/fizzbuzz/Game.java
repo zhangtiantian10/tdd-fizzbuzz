@@ -12,17 +12,19 @@ public class Game {
             if (numberStr.contains("3")) {
                 return "Fizz";
             }
+        }
 
+        if (numberStr.contains("7") || !numberStr.contains("5")) {
             if (isFizz) {
                 result += "Fizz";
             }
         }
 
-        if (isBuzz) {
+        if (!numberStr.contains("7") && isBuzz) {
             result += "Buzz";
         }
 
-        if (isWhizz) {
+        if (isWhizz || numberStr.contains("7")) {
             result += "Whizz";
         }
 
