@@ -53,4 +53,10 @@ public class GameSpec {
         Game game = new Game();
         assertThat(game.run(105)).isEqualTo("FizzBuzzWhizz");
     }
+
+    @Test
+    void should_return_Fizz_when_contains_3() {
+        Game game = new Game();
+        assertThat(game.run(30)).isEqualTo("Fizz");
+    }
 }
