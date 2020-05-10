@@ -8,8 +8,14 @@ public class Game {
         boolean isBuzz = number % 5 == 0;
         boolean isWhizz = number % 7 == 0;
 
-        if (isFizz) {
-            result += "Fizz";
+        if (!numberStr.contains("5")) {
+            if (numberStr.contains("3")) {
+                return "Fizz";
+            }
+
+            if (isFizz) {
+                result += "Fizz";
+            }
         }
 
         if (isBuzz) {
@@ -18,10 +24,6 @@ public class Game {
 
         if (isWhizz) {
             result += "Whizz";
-        }
-
-        if (numberStr.contains("3")) {
-            return "Fizz";
         }
 
         return result.isEmpty() ? String.valueOf(number) : result;
