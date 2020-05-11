@@ -59,8 +59,7 @@ class Whizz extends SpecialNumber {
 
     @Override
     String getSpecialWord() {
-        String numberStr = String.valueOf(this.number);
-        if (isWhizz || numberStr.contains("7")) {
+        if (isWhizz) {
             return "Whizz";
         }
 
